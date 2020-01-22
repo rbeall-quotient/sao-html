@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/sao.css">
+    <script type="text/javascript" src="./js/addInputRow.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="page-header">
+        <div class="page-header-top">
+          <h1>SAO Rent Application</h1>
+        </div>
+        <div class="page-header-bottom">
+          <span>
+            Voucher Upload
+          </span>
+        </div>
+      </div>
+      <br/><br/>
+      <div style="overflow: scroll;">
+        <h3>Vendor Entry</h3>
+        <hr/>
+        <table id="vendorInput" class="display-table input-table">
+          <tr>
+            <th>Voucher #</th>
+            <th>Acct.<br/>Date</th>
+            <th>Entered<br/>Date</th>
+            <th>P.O. # on<br/>Voucher</th>
+            <th>P.O. # on<br/>Voucher Line</th>
+            <th>Vendor Name</th>
+            <th>Description</th>
+            <th>Acct</th>
+            <th>Project</th>
+            <th>Activity</th>
+            <th>Amount</th>
+            <th>Group</th>
+            <th>Bldg.</th>
+            <th>Comment</th>
+            <th>Category</th>
+            <th>Distrib.<br/>Y/N</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+            <td><input type="text"/></td>
+          </tr>
+        </table>
+        <br/>
+        <span>
+          <button type="button" name="addRow" onclick="addVendorRow()">+</button>
+          <button type="button" name="removeRow" onclick="removeVendorRow()">-</button>
+        </span>
+      </div>
+      <div>
+        <h3>Total Expenses For September 2019</h3>
+        <hr/>
+        <table class="display-table" style="display:inline-table">
+          <tr>
+            <th>Group</th>
+            <th>Building</th>
+            <th>Total</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td>162,128.16</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>M</td>
+            <td>97,180.02</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>R</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>W</td>
+            <td>1,353.3</td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Total</strong></td>
+            <td>260,661.48</td>
+          </tr>
+        </table>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <table class="display-table" style="display:inline-table">
+          <tr>
+            <th>Category</th>
+            <th>Totals</th>
+          </tr>
+          <tr>
+            <td>Rent</td>
+            <td>99,999,999.99</td>
+          </tr>
+          <tr>
+            <td>Utilities</td>
+            <td>999,999.99</td>
+          </tr>
+          <tr>
+            <td>Parking</td>
+            <td>999,999.99</td>
+          </tr>
+          <tr>
+            <td>Other Charges</td>
+            <td>999,999.99</td>
+          </tr>
+          <tr>
+            <td>Sub-Lease</td>
+            <td>99,999,999.99</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td>99,999,999.99</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

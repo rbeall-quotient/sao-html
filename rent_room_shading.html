@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/sao.css">
+    <script type="text/javascript" src="./js/addInputRow.js"></script>
+    <script type="text/javascript" src="./js/fundPercentages.js"></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div class="page-header">
+          <div class="page-header-top">
+            <h1>SAO Rent Application</h1>
+          </div>
+          <div class="page-header-bottom">
+            <span>
+              Group: 1 &nbsp&nbsp Building: AA &nbsp&nbsp Description: 60 GARDEN ST. - BLDG "A"
+            </span>
+            <span style="float:right;">
+              Room#: 999A &nbsp&nbsp Number of Occupants: 99
+            </span>
+          </div>
+        </div>
+        <br/>
+        <div style="padding-left:10px;">
+          <div>
+            <h3>Occupants</h3>
+            <hr/>
+            <br/>
+            <table class="display-table">
+              <tr>
+                <th>No.</th>
+                <th>Occupant</th>
+                <th>Dept.<br/>ID</th>
+                <th>Federal</th>
+                <th>Trust<br/>CG</th>
+                <th>Trust<br/>Other</th>
+                <th>Harvard<br/>CG</th>
+                <th>Harvard<br/>Other</th>
+                <th>Census<br/>FTE</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Kumar, A.</td>
+                <td>404I97</td>
+                <td></td>
+                <td></td>
+                <td>1.0</td>
+                <td></td>
+                <td></td>
+                <td>1.0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Mendoza, GBB</td>
+                <td>404E81</td>
+                <td>0.5</td>
+                <td>0.5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1.0</td>
+              </tr>
+            </table>
+            <br/>
+          </div>
+          <div>
+            <h3>Funding and Room Data</h3>
+            <hr/>
+            <br/>
+            <table class="horiz-table">
+              <tr>
+                <th>
+                  <span class="tooltip">
+                    <strong>H/S/C:</strong>
+                    <span class="tooltiptext">Harvard/Smithsonian/Combined</span>
+                  </span>
+                </th>
+                <td>C</td>
+              </tr>
+              <tr>
+                <th>
+                  Pro-Rated (Y/N)
+                </th>
+                <td>Y</td>
+              </tr>
+              <tr>
+                <th>
+                  Net Area
+                </th>
+                <td id="net">
+                  9999.999
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Gross Area
+                </th>
+                <td id="gross">
+                  9999.999
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Rent
+                </th>
+                <td id="rent">
+                  99,999.99
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Utilities
+                </th>
+                <td id="util">
+                  99,999.99
+                </td>
+              </tr>
+            </table>
+            <br/><br/>
+            <h3>Rent Data Entry</h3>
+            <hr/>
+            <br/>
+            <table id="rentRoomInput" class="input-table">
+              <tr>
+                <th>Fund</th>
+                <th>Bud.<br/>Ref</th>
+                <th>DsgCode</th>
+                <th>Deptid</th>
+                <th>Program</th>
+                <th>Project</th>
+                <th>Activity</th>
+                <th>%</th>
+                <th>Charge<br/>Area</th>
+                <th>Rent</th>
+                <th>Utilities</th>
+              </tr>
+              <tr>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input id="p0" type="number" onchange="getPValues(0)" value="0"/></td>
+                <td id="ca0">0</td>
+                <td id="r0">0</td>
+                <td id="u0">0</td>
+              </tr>
+            </table>
+            <br/>
+            <span>
+              <button type="button" name="addRow" onclick="addRow()" class="incre-button">+</button>
+              <button type="button" name="removeRow" onclick="removeRow()" class="incre-button">-</button>
+            </span>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

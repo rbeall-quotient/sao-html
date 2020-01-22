@@ -1,0 +1,42 @@
+.half-page-block-left
+{
+  padding-left: 20px;
+  width: 30%;
+  float: left;
+  margin-left: 3%
+}
+
+.half-page-block-right
+{
+  width: 67%;
+  float: right;
+}
+
+.activity-section
+{
+  /*width: 90%;*/
+  margin-left: 10%;
+  margin-right: 10%;
+  border-style: solid;
+  border-color: black;
+  padding: 40px;
+}
+
+.activity-left
+{
+  width: 45%;
+  display: inline-block;
+}
+
+.activity-right
+{
+  width: 50%;
+  float: right;
+  padding-right: 30%;
+  display: inline-block;
+}
+
+.activity-bottom
+{
+  width: 100%;
+}

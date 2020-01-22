@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/sao.css">
+    <link rel="stylesheet" href="./css/sao-sections.css">
+    <link rel="stylesheet" href="./css/sao-header.css">
+    <link rel="stylesheet" href="./css/sao-tables.css">
+    <script type="text/javascript" src="./js/addInputRow.js"></script>
+    <script type="text/javascript" src="./js/showFormSection.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <div class="page-header-top" style="text-align: center">
+        <h1>SAO Rent Application</h1>
+      </div>
+      <div class="page-header-tabs">
+        <!--<table style="margin:0 auto;">
+          <tr>
+            <td class="navbar-brand"><a class="" href="#">Scenario</a></td>
+            <td class="navbar-brand"><a href="#">Building</a></td>
+            <td class="navbar-brand"><a class="" href="#">Rooms</a></td>
+            <td class="navbar-brand"><a href="#">Process</a></td>
+          </tr>
+        </table>-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+          <a class="navbar-brand navbar-spacing" href="#">Scenario</a>
+          <a class="navbar-brand navbar-spacing" href="#">Building</a>
+          <a class="navbar-brand navbar-spacing" href="rent_room_shading.html">Rooms</a>
+          <a class="navbar-brand navbar-spacing" href="#">Process</a>
+          <a class="navbar-brand navbar-spacing" href="#">Reports</a>
+          <a class="navbar-brand navbar-spacing" href="#">Utilities</a>
+        </nav>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <h3>Data Set: September 2019 - Actual</h3>
+    </div>
+    <div class="building-title-block" style="text-align: left">
+      <h1><strong>Group:</strong> 1	&nbsp;&nbsp;&nbsp;<strong>Building:</strong>  A
+      &nbsp;&nbsp;&nbsp;<strong>Description:</strong> 60 GARDEN ST. - BLDG "A"</h1>
+      <hr/><br/>
+    </div>
+    <div class="activity-section">
+      <div class="activity-left">
+        <h3>Area</h3>
+        <br/>
+        <table class="display-table horiz-table mid-table">
+          <tr>
+            <th class="input-table-cell">Gross Area</th>
+            <td>
+              <input type="number" class="form-control"/>
+            </td>
+          </tr>
+          <tr>
+            <th>Net Area</th>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <th>Billed Area</th>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <th>Charged Area</th>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <th>Total Rooms</th>
+            <td>99999</td>
+          </tr>
+        </table>
+        <br/>
+        <h3>Rates</h3>
+        <br/>
+        <table class="display-table horiz-table">
+          <tr>
+            <th colspan=2 class="input-table-cell">Leased Rate</th>
+            <td><input type="number" id="leasedRate" class="form-control"></td>
+          </tr>
+          <tr>
+            <th class="input-table-cell" style="border-right: none;">
+              Rebill Rate
+            </th>
+            <th class="input-table-cell" style="border-left: none;">
+              <select id="rebillSelect" class="form-control">
+                <option>Average</option>
+                <option>Building</option>
+                <option>Other</option>
+              </select>
+            </th>
+            <td><input type="number" id="rebillRate" class="form-control" value="99999" disabled></td>
+          </tr>
+          <tr>
+            <th class="input-table-cell" style="border-right: none;">
+              Distrib. Rate
+            </th>
+            <th class="input-table-cell" style="border-left: none;">
+              <select id="rebillSelect" class="form-control">
+                <option>Average</option>
+                <option>Building</option>
+                <option>Other</option>
+              </select>
+            </th>
+            <td><input type="number" id="distRate" class="form-control"></td>
+          </tr>
+          <tr>
+            <th colspan=2>Bldg. Rate</th>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <th colspan=2>Average Rate</th>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <th colspan=2>Average Rent</th>
+            <td>999,999.999</td>
+          </tr>
+        </table>
+      </div>
+      <div class="activity-right">
+        <h3 style="margin-left: -40%;">Expenses</h3>
+        <br/>
+        <table style="float:right; margin-right:120px;" class="display-table mid-table">
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td>Lease Rent</td>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <td>Utilities</td>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <td>Parking</td>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <td>Other</td>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <td>Sublease (credits)</td>
+            <td>- 999,999.999</td>
+          </tr>
+          <tr>
+            <td>Total Rent / Building</td>
+            <td>999,999.999</td>
+          </tr>
+        </table>
+      </div>
+      <div class="activity-bottom">
+        <h3>Gross Area by Fund</h3>
+        <br/>
+        <table class="long-table">
+          <tr>
+            <th>Gross Area</th>
+            <th>Trust</th>
+            <th>Federal</th>
+            <th>HCO</th>
+          </tr>
+          <tr>
+            <td>Sole Use</td>
+            <td>999,999.999</td>
+            <td>999,999.999</td>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <td>Shared Use</td>
+            <td>999,999.999</td>
+            <td>999,999.999</td>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <td>Vacant</td>
+            <td>999,999.999</td>
+            <td>999,999.999</td>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <td>Pro Rated</td>
+            <td>999,999.999</td>
+            <td>999,999.999</td>
+            <td>999,999.999</td>
+          </tr>
+          <tr>
+            <td><strong>Totals</strong></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <br/>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" >Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>

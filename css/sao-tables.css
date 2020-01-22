@@ -1,0 +1,88 @@
+.horiz-display-table td
+{
+  z-index: 100;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.horiz-display-table th
+{
+  background-color: #b3b3b3;
+}
+
+.horiz-table th
+{
+  z-index: 100;
+  text-align: left;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.horiz-table td
+{
+  z-index: 100;
+  text-align: right;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+tr
+{
+  height: 30px;
+}
+
+th, td
+{
+  min-width: 40px;
+}
+
+th
+{
+  background-color: darkgrey;
+  color: white;
+}
+
+.input-table th
+{
+  background-color: #66b3ff;
+  color: white;
+}
+
+.input-table-cell
+{
+  background-color: #66b3ff;
+  color: white;
+}
+
+.display-table
+{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.display-table th, td
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 150px;
+}
+
+.fddata-display
+{
+  min-width: 500px;
+  padding-right: 10px;
+}
+
+.long-table
+{
+  min-width: 1500px;
+}
+
+.long-table td
+{
+    text-align: left;
+}
+
+.mid-table
+{
+  min-width: 500px; 
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/sao.css">
+    <link rel="stylesheet" href="./css/sao-sections.css">
+    <link rel="stylesheet" href="./css/sao-header.css">
+    <link rel="stylesheet" href="./css/sao-tables.css">
+    <script type="text/javascript" src="./js/addInputRow.js"></script>
+    <script type="text/javascript" src="./js/showFormSection.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <div class="page-header-top" style="text-align: center">
+        <h1>SAO Rent Application</h1>
+      </div>
+      <div class="page-header-tabs">
+        <!--<table style="margin:0 auto;">
+          <tr>
+            <td class="navbar-brand"><a class="" href="#">Scenario</a></td>
+            <td class="navbar-brand"><a href="#">Building</a></td>
+            <td class="navbar-brand"><a class="" href="#">Rooms</a></td>
+            <td class="navbar-brand"><a href="#">Process</a></td>
+          </tr>
+        </table>-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+          <a class="navbar-brand navbar-spacing" href="#">Scenario</a>
+          <a class="navbar-brand navbar-spacing" href="#">Building</a>
+          <a class="navbar-brand navbar-spacing" href="rent_room_shading.html">Rooms</a>
+          <a class="navbar-brand navbar-spacing" href="#">Process</a>
+          <a class="navbar-brand navbar-spacing" href="#">Reports</a>
+          <a class="navbar-brand navbar-spacing" href="#">Utilities</a>
+        </nav>
+      </div>
+    </div>
+    <div class="building-title-block" style="text-align: left">
+      <h1><strong>Group:</strong> 1	&nbsp;&nbsp;&nbsp;<strong>Building:</strong>  A
+      &nbsp;&nbsp;&nbsp;<strong>Description:</strong> 60 GARDEN ST. - BLDG "A"</h1>
+      <h3><strong>Room #:</strong> 999A &nbsp;&nbsp;&nbsp;<strong>Number of Occupants: 99</strong></h3>
+      <hr/><br/>
+    </div>
+    <div class="activity-section">
+      <br/>
+      <div style="padding-left:10px;">
+        <div class="box-section">
+          <h3 style="text-decoration: underline">SDF Information</h3>
+          <hr/>
+          <br/>
+          <table class="display-table">
+            <tr>
+              <th>No.</th>
+              <th>Occupant</th>
+              <th>Dept.<br/>ID</th>
+              <th>Federal</th>
+              <th>Trust<br/>CG</th>
+              <th>Trust<br/>Other</th>
+              <th>Harvard<br/>CG</th>
+              <th>Harvard<br/>Other</th>
+              <th>Census<br/>FTE</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Kumar, A.</td>
+              <td>404I97</td>
+              <td></td>
+              <td></td>
+              <td>1.0</td>
+              <td></td>
+              <td></td>
+              <td>1.0</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mendoza, GBB</td>
+              <td>404E81</td>
+              <td>0.5</td>
+              <td>0.5</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>1.0</td>
+            </tr>
+          </table>
+          <br/>
+        </div>
+        <div>
+          <h3>Funding and Room Data</h3>
+          <hr/>
+          <br/>
+          <table class="display-table horiz-table" style="display:inline-table; margin-right: 100px;">
+            <tr>
+              <th>Harvard/Smithsonian/Combined</th>
+              <td>C</td>
+            </tr>
+            <tr>
+              <th>
+                Pro-Rated (Y/N)
+              </th>
+              <td>Y</td>
+            </tr>
+            </table>
+            <table class="display-table horiz-table" style="display:inline-table; margin-right: 100px;">
+            <tr>
+              <th>
+                Net Area
+              </th>
+              <td id="net">
+                9999.999
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Gross Area
+              </th>
+              <td id="gross">
+                9999.999
+              </td>
+            </tr>
+            </table>
+            <table class="display-table horiz-table" style="display:inline-table">
+            <tr>
+              <th>
+                Rent
+              </th>
+              <td id="rent">
+                99,999.99
+              </td>
+            </tr>
+            <tr>
+              <th>
+                Utilities
+              </th>
+              <td id="util">
+                99,999.99
+              </td>
+            </tr>
+          </table>
+          <br/><br/>
+          <h3>Rent Data Entry</h3>
+          <hr/>
+          <br/>
+          <div style="overflow: scroll;">
+            <table id="rentRoomInput" class="input-table">
+              <tr>
+                <th>Fund</th>
+                <th>Bud.<br/>Ref</th>
+                <th>DsgCode</th>
+                <th>Deptid</th>
+                <th>Program</th>
+                <th>Project</th>
+                <th>Activity</th>
+                <th>%</th>
+                <th>Charge<br/>Area</th>
+                <th>Rent</th>
+                <th>Utilities</th>
+              </tr>
+              <tr>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input type="text"/></td>
+                <td><input id="p0" type="number" onchange="getPValues(0)" value="0"/></td>
+                <td id="ca0">0</td>
+                <td id="r0">0</td>
+                <td id="u0">0</td>
+              </tr>
+            </table>
+          </div>
+          <br/>
+          <span>
+            <button type="button" name="addRow" onclick="addRow()" class="incre-button">+</button>
+            <button type="button" name="removeRow" onclick="removeRow()" class="incre-button">-</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

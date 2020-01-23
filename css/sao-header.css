@@ -60,7 +60,23 @@ a.navbar-brand:hover
   height: 50px;
 }
 
+.page-header-dropdown
+{
+  background-color: #b3b3b3;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  height: auto;
+}
+
 .page-header-tabs a
 {
   color: white
+}
+
+.sao-dropdown
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

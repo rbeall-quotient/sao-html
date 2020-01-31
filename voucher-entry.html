@@ -1,26 +1,79 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="./css/sao.css">
+    <link rel="stylesheet" href="./css/sao-sections.css">
+    <link rel="stylesheet" href="./css/sao-header.css">
+    <link rel="stylesheet" href="./css/sao-footer.css">
+    <link rel="stylesheet" href="./css/sao-voucher.css">
     <script type="text/javascript" src="./js/addInputRow.js"></script>
+    <script type="text/javascript" src="./js/showFormSection.js"></script>
   </head>
   <body>
-    <div>
-      <div class="page-header">
-        <div class="page-header-top">
-          <h1>SAO Rent Application</h1>
-        </div>
-        <div class="page-header-bottom">
-          <span>
-            Voucher Upload
-          </span>
-        </div>
+    <div style="text-align: center">
+      <div class="page-header-top" style="text-align: center">
+        <h1>SAO Rent Application</h1>
       </div>
-      <br/><br/>
-      <div style="overflow: scroll;">
-        <h3>Vendor Entry</h3>
+      <div class="page-header-tabs">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+          <ul class="navbar-nav" style="list-style: none">
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="homepage.html">Scenario</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="building.html">Building</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="rent-room.html">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="#">Process</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand navbar-spacing dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reports
+              </a>
+              <div class="dropdown-menu page-header-dropdown sao-dropdown" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Bldg. Summary - Cost</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Summary- Area</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Detail</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Occupancy</a><br/>
+                <a class="dropdown-item" href="#">Dept. Occupancy</a><br/>
+                <a class="dropdown-item" href="#">HCO Rent</a><br/>
+                <a class="dropdown-item" href="#">YTD Rent</a><br/>
+                <hr/>
+                <a class="dropdown-item" href="#">Run All</a><br/>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand navbar-spacing dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Utilities
+              </a>
+              <div class="dropdown-menu page-header-dropdown sao-dropdown" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Import Voucher</a><br/>
+                <a class="dropdown-item" href="voucher-entry.html">Edit Expenses</a><br/>
+                <a class="dropdown-item" href="#">Funding Change</a><br/>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <h3>Data Set: <strong>September 2019 - Actual</strong></h3>
+    </div>
+    <br/>
+    <div class="activity-section">
+      <h3 style="text-align: center">Voucher Upload for September 2019</h3>
         <hr/>
-        <table id="vendorInput" class="display-table input-table">
+        <table id="vendorInput" class="voucher-input-table">
           <tr>
             <th>Voucher #</th>
             <th>Acct.<br/>Date</th>
@@ -40,33 +93,32 @@
             <th>Distrib.<br/>Y/N</th>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
-            <td><input type="text"/></td>
+            <td><input type="text" style="width:120px"/></div></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
+            <td><input type="text" style="width:120px;"/></td>
           </tr>
         </table>
         <br/>
         <span>
-          <button type="button" name="addRow" onclick="addVendorRow()">+</button>
-          <button type="button" name="removeRow" onclick="removeVendorRow()">-</button>
+          <button type="button" name="addRow" onclick="addVendorRow()" class="incre-button">+</button>
+          <button type="button" name="removeRow" onclick="removeVendorRow()" class="incre-button">-</button>
         </span>
-      </div>
       <div>
-        <h3>Total Expenses For September 2019</h3>
         <hr/>
+        <h3>Total Expenses For September 2019</h3>
         <table class="display-table" style="display:inline-table">
           <tr>
             <th>Group</th>
@@ -74,62 +126,86 @@
             <th>Total</th>
           </tr>
           <tr>
-            <td>1</td>
-            <td></td>
-            <td>162,128.16</td>
+            <td style="text-align: center;">1</td>
+            <td style="text-align: right;"></td>
+            <td style="text-align: right;">162,128.16</td>
           </tr>
           <tr>
-            <td>3</td>
+            <td style="text-align: center;">3</td>
             <td>M</td>
-            <td>97,180.02</td>
+            <td style="text-align: right;">97,180.02</td>
           </tr>
           <tr>
-            <td>3</td>
+            <td style="text-align: center;">3</td>
             <td>R</td>
             <td></td>
           </tr>
           <tr>
-            <td>3</td>
+            <td style="text-align: center;">3</td>
             <td>W</td>
-            <td>1,353.3</td>
+            <td style="text-align: right;">1,353.30</td>
           </tr>
           <tr>
-            <td colspan="2"><strong>Total</strong></td>
-            <td>260,661.48</td>
+            <td colspan="2" style="text-align: left;"><strong>Total</strong></td>
+            <td style="text-align: right;">260,661.48</td>
           </tr>
         </table>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <table class="display-table" style="display:inline-table">
+        <table class="display-table sao-data-display" style="display:inline-table">
           <tr>
             <th>Category</th>
             <th>Totals</th>
           </tr>
           <tr>
-            <td>Rent</td>
-            <td>99,999,999.99</td>
+            <td style="text-align: left;">Rent</td>
+            <td style="text-align: right;">99,999,999.99</td>
           </tr>
           <tr>
-            <td>Utilities</td>
-            <td>999,999.99</td>
+            <td style="text-align: left;">Utilities</td>
+            <td style="text-align: right;">999,999.99</td>
           </tr>
           <tr>
-            <td>Parking</td>
-            <td>999,999.99</td>
+            <td style="text-align: left;">Parking</td>
+            <td style="text-align: right;">999,999.99</td>
           </tr>
           <tr>
-            <td>Other Charges</td>
-            <td>999,999.99</td>
+            <td style="text-align: left;">Other Charges</td>
+            <td style="text-align: right;">999,999.99</td>
           </tr>
           <tr>
-            <td>Sub-Lease</td>
-            <td>99,999,999.99</td>
+            <td style="text-align: left;">Sub-Lease</td>
+            <td style="text-align: right;">99,999,999.99</td>
           </tr>
           <tr>
-            <td><strong>Total</strong></td>
-            <td>99,999,999.99</td>
+            <td style="text-align: left;"><strong>Total</strong></td>
+            <td style="text-align: right;">99,999,999.99</td>
           </tr>
         </table>
       </div>
     </div>
+    <footer class="page-footer-tabs">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+        <ul class="navbar-nav" style="list-style: none; padding-top: 25px">
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Next</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Previous</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Save</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Exit</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

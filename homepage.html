@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/sao.css">
     <link rel="stylesheet" href="./css/sao-sections.css">
     <link rel="stylesheet" href="./css/sao-header.css">
+    <link rel="stylesheet" href="./css/sao-footer.css">
     <link rel="stylesheet" href="./css/sao-tables.css">
     <script type="text/javascript" src="./js/addInputRow.js"></script>
     <script type="text/javascript" src="./js/showFormSection.js"></script>
@@ -21,24 +22,16 @@
         <h1>SAO Rent Application</h1>
       </div>
       <div class="page-header-tabs">
-        <!--<table style="margin:0 auto;">
-          <tr>
-            <td class="navbar-brand"><a class="" href="#">Scenario</a></td>
-            <td class="navbar-brand"><a href="#">Building</a></td>
-            <td class="navbar-brand"><a class="" href="#">Rooms</a></td>
-            <td class="navbar-brand"><a href="#">Process</a></td>
-          </tr>
-        </table>-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
           <ul class="navbar-nav" style="list-style: none">
             <li class="nav-item">
-              <a class="navbar-brand navbar-spacing" href="#">Scenario</a>
+              <a class="navbar-brand navbar-spacing" href="homepage.html">Scenario</a>
             </li>
             <li class="nav-item">
-              <a class="navbar-brand navbar-spacing" href="#">Building</a>
+              <a class="navbar-brand navbar-spacing" href="building.html">Building</a>
             </li>
             <li class="nav-item">
-              <a class="navbar-brand navbar-spacing" href="#">Rooms</a>
+              <a class="navbar-brand navbar-spacing" href="rent-room.html">Rooms</a>
             </li>
             <li class="nav-item">
               <a class="navbar-brand navbar-spacing" href="#">Process</a>
@@ -65,7 +58,7 @@
               </a>
               <div class="dropdown-menu page-header-dropdown sao-dropdown" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Import Voucher</a><br/>
-                <a class="dropdown-item" href="#">Edit Expenses</a><br/>
+                <a class="dropdown-item" href="voucher-entry.html">Edit Expenses</a><br/>
                 <a class="dropdown-item" href="#">Funding Change</a><br/>
               </div>
             </li>
@@ -73,8 +66,8 @@
         </nav>
       </div>
     </div><br/><br/>
-    <div class="">
-        <form onsubmit="openModal()" id="homepageForm" class="half-page-block-left">
+    <div class="homepage-section" style="height:800px;">
+        <form id="homepageForm">
           <h3>Scenario Input</h3>
           <hr/>
           <div class="form-row">
@@ -163,26 +156,30 @@
             <button type="submit" class="btn btn-primary" >Submit</button>
           </div>
         </form>
-        <script>
-          $('#homepageForm').on('submit', function(e){
-            $('#myModal').modal('show');
-            e.preventDefault();
-          });
-        </script>
-        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Do You Want To Create Now?</h4>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary">Create</button>
-              </div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
     </div>
+    <footer class="page-footer-tabs">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+        <ul class="navbar-nav" style="list-style: none; padding-top: 25px">
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Next</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Previous</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Save</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Exit</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

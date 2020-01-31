@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/sao.css">
     <link rel="stylesheet" href="./css/sao-sections.css">
     <link rel="stylesheet" href="./css/sao-header.css">
+    <link rel="stylesheet" href="./css/sao-footer.css">
     <link rel="stylesheet" href="./css/sao-tables.css">
     <script type="text/javascript" src="./js/addInputRow.js"></script>
     <script type="text/javascript" src="./js/showFormSection.js"></script>
@@ -21,39 +22,68 @@
         <h1>SAO Rent Application</h1>
       </div>
       <div class="page-header-tabs">
-        <!--<table style="margin:0 auto;">
-          <tr>
-            <td class="navbar-brand"><a class="" href="#">Scenario</a></td>
-            <td class="navbar-brand"><a href="#">Building</a></td>
-            <td class="navbar-brand"><a class="" href="#">Rooms</a></td>
-            <td class="navbar-brand"><a href="#">Process</a></td>
-          </tr>
-        </table>-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
-          <a class="navbar-brand navbar-spacing" href="#">Scenario</a>
-          <a class="navbar-brand navbar-spacing" href="#">Building</a>
-          <a class="navbar-brand navbar-spacing" href="rent_room_shading.html">Rooms</a>
-          <a class="navbar-brand navbar-spacing" href="#">Process</a>
-          <a class="navbar-brand navbar-spacing" href="#">Reports</a>
-          <a class="navbar-brand navbar-spacing" href="#">Utilities</a>
+          <ul class="navbar-nav" style="list-style: none">
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="homepage.html">Scenario</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="building.html">Building</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="rent-room.html">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="#">Process</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand navbar-spacing dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reports
+              </a>
+              <div class="dropdown-menu page-header-dropdown sao-dropdown" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Bldg. Summary - Cost</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Summary- Area</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Detail</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Occupancy</a><br/>
+                <a class="dropdown-item" href="#">Dept. Occupancy</a><br/>
+                <a class="dropdown-item" href="#">HCO Rent</a><br/>
+                <a class="dropdown-item" href="#">YTD Rent</a><br/>
+                <hr/>
+                <a class="dropdown-item" href="#">Run All</a><br/>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand navbar-spacing dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Utilities
+              </a>
+              <div class="dropdown-menu page-header-dropdown sao-dropdown" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Import Voucher</a><br/>
+                <a class="dropdown-item" href="voucher-entry.html">Edit Expenses</a><br/>
+                <a class="dropdown-item" href="#">Funding Change</a><br/>
+              </div>
+            </li>
+          </ul>
         </nav>
       </div>
     </div>
-    <div class="building-title-block" style="text-align: left">
+    <div style="text-align: center">
+      <h3>Data Set: <strong>September 2019 - Actual</strong></h3>
+    </div>
+    <br/>
+    <div class="building-title-block" style="text-align: left; margin-left: 10%">
       <h1><strong>Group:</strong> 1	&nbsp;&nbsp;&nbsp;<strong>Building:</strong>  A
       &nbsp;&nbsp;&nbsp;<strong>Description:</strong> 60 GARDEN ST. - BLDG "A"</h1>
       <h3><strong>Room #:</strong> 999A &nbsp;&nbsp;&nbsp;<strong>Number of Occupants: 99</strong></h3>
-      <hr/><br/>
     </div>
+    <hr/><br/>
     <div class="activity-section">
       <br/>
       <div style="padding-left:10px;">
         <div class="box-section">
-          <h3 style="text-decoration: underline">SDF Information</h3>
-          <hr/>
-          <br/>
-          <table class="display-table">
+          <h3 style="text-decoration: underline; display: table-inline"><strong>SDF Information</strong></h3>
+          <table class="display-table" style="display:table-inline">
             <tr>
+              <td style="visibility: hidden; border-style: none; border-color: white"></td>
               <th>No.</th>
               <th>Occupant</th>
               <th>Dept.<br/>ID</th>
@@ -65,34 +95,36 @@
               <th>Census<br/>FTE</th>
             </tr>
             <tr>
-              <td>1</td>
+              <td style="border-color: white; border: none"><strong style="text-decoration: underline">SDF Information</strong></td>
+              <td style="text-align: right">1</td>
               <td>Kumar, A.</td>
               <td>404I97</td>
               <td></td>
               <td></td>
-              <td>1.0</td>
+              <td style="text-align: right">1.0</td>
               <td></td>
               <td></td>
-              <td>1.0</td>
+              <td style="text-align: right">1.0</td>
             </tr>
             <tr>
-              <td>2</td>
+              <td style="visibility: hidden; border-style: none"></td>
+              <td style="text-align: right">2</td>
               <td>Mendoza, GBB</td>
               <td>404E81</td>
-              <td>0.5</td>
-              <td>0.5</td>
+              <td style="text-align: right">0.5</td>
+              <td style="text-align: right">0.5</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>1.0</td>
+              <td style="text-align: right">1.0</td>
             </tr>
           </table>
           <br/>
         </div>
+        <br/>
         <div>
           <h3>Funding and Room Data</h3>
           <hr/>
-          <br/>
           <table class="display-table horiz-table" style="display:inline-table; margin-right: 100px;">
             <tr>
               <th>Harvard/Smithsonian/Combined</th>
@@ -144,11 +176,10 @@
           <br/><br/>
           <h3>Rent Data Entry</h3>
           <hr/>
-          <br/>
           <div style="overflow: scroll;">
             <table id="rentRoomInput" class="input-table">
               <tr>
-                <th>Fund</th>
+                <th><div>Fund</div></th>
                 <th>Bud.<br/>Ref</th>
                 <th>DsgCode</th>
                 <th>Deptid</th>
@@ -161,17 +192,17 @@
                 <th>Utilities</th>
               </tr>
               <tr>
-                <td><input type="text"/></td>
-                <td><input type="text"/></td>
-                <td><input type="text"/></td>
-                <td><input type="text"/></td>
-                <td><input type="text"/></td>
-                <td><input type="text"/></td>
-                <td><input type="text"/></td>
-                <td><input id="p0" type="number" onchange="getPValues(0)" value="0"/></td>
-                <td id="ca0">0</td>
-                <td id="r0">0</td>
-                <td id="u0">0</td>
+                <td><input type="text" style="width: 150px; text-align: right;"/></td>
+                <td><input type="text" style="width: 150px; text-align: right;"/></td>
+                <td><input type="text" style="width: 150px; text-align: right;"/></td>
+                <td><input type="text" style="width: 150px; text-align: right;"/></td>
+                <td><input type="text" style="width: 150px; text-align: right;"/></td>
+                <td><input type="text" style="width: 150px; text-align: right;"/></td>
+                <td><input type="text" style="width: 150px; text-align: right;"/></td>
+                <td><input id="p0" type="number" onchange="getPValues(0)" value="0" style="width: 150px; text-align: right;"/></td>
+                <td id="ca0" style="text-align:right">0</td>
+                <td id="r0"  style="text-align:right">0</td>
+                <td id="u0"  style="text-align:right">0</td>
               </tr>
             </table>
           </div>
@@ -183,5 +214,29 @@
         </div>
       </div>
     </div>
+    <footer class="page-footer-tabs">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+        <ul class="navbar-nav" style="list-style: none; padding-top: 25px">
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Next</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Previous</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Save</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Exit</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

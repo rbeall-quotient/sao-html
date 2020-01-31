@@ -16,6 +16,7 @@ function addRow()
     {
       input = document.createElement("input");
       input.setAttribute('type', 'text');
+      input.setAttribute('style', 'width: 150px; text-align: right;');
 
       if(i == 7)
       {
@@ -29,6 +30,7 @@ function addRow()
     }
     else
     {
+      newCell.setAttribute("style", "text-align: right;");
       input = document.createTextNode("");
 
       if(i == 8)
@@ -81,25 +83,19 @@ function addVendorRow()
     let newCell = newRow.insertCell(i);
     let input = null;
     // Append a text node to the cell
-    if(i > 11)
-    {
-      input = document.createElement("input");
-      input.setAttribute('type', 'text');
+    input = document.createElement("input");
+    input.setAttribute('type', 'text');
+    input.setAttribute('style', 'width:120px');
 
-      if(i == 11)
-      {
-          input.setAttribute('type', "number");
-          input.setAttribute('id', 'p' + (document.getElementById("rentRoomInput").rows.length - 2));
-          input.setAttribute('onchange', "getPValues(" + (document.getElementById("rentRoomInput").rows.length - 2) + ")");
-          input.setAttribute("value", 0);
-      }
-
-      console.log("adding an input text")
-    }
-    else
+    /*if(i == 11)
     {
-      input = document.createTextNode("");
-    }
+        input.setAttribute('type', "number");
+        input.setAttribute('id', 'p' + (document.getElementById("rentRoomInput").rows.length - 2));
+        input.setAttribute('onchange', "getPValues(" + (document.getElementById("rentRoomInput").rows.length - 2) + ")");
+        input.setAttribute("value", 0);
+    }*/
+
+    console.log("adding an input text");
 
     newCell.appendChild(input);
   }

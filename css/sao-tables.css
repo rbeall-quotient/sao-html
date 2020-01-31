@@ -84,5 +84,15 @@ th
 
 .mid-table
 {
-  min-width: 500px; 
+  min-width: 500px;
+}
+
+.sao-data-display th
+{
+  text-align: left;
+}
+
+.sao-data-display td
+{
+  text-align: right; 
 }

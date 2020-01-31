@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/sao.css">
     <link rel="stylesheet" href="./css/sao-sections.css">
     <link rel="stylesheet" href="./css/sao-header.css">
+    <link rel="stylesheet" href="./css/sao-footer.css">
     <link rel="stylesheet" href="./css/sao-tables.css">
     <script type="text/javascript" src="./js/addInputRow.js"></script>
     <script type="text/javascript" src="./js/showFormSection.js"></script>
@@ -21,33 +22,60 @@
         <h1>SAO Rent Application</h1>
       </div>
       <div class="page-header-tabs">
-        <!--<table style="margin:0 auto;">
-          <tr>
-            <td class="navbar-brand"><a class="" href="#">Scenario</a></td>
-            <td class="navbar-brand"><a href="#">Building</a></td>
-            <td class="navbar-brand"><a class="" href="#">Rooms</a></td>
-            <td class="navbar-brand"><a href="#">Process</a></td>
-          </tr>
-        </table>-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
-          <a class="navbar-brand navbar-spacing" href="#">Scenario</a>
-          <a class="navbar-brand navbar-spacing" href="#">Building</a>
-          <a class="navbar-brand navbar-spacing" href="rent_room_shading.html">Rooms</a>
-          <a class="navbar-brand navbar-spacing" href="#">Process</a>
-          <a class="navbar-brand navbar-spacing" href="#">Reports</a>
-          <a class="navbar-brand navbar-spacing" href="#">Utilities</a>
+          <ul class="navbar-nav" style="list-style: none">
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="homepage.html">Scenario</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="building.html">Building</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="rent-room.html">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand navbar-spacing" href="#">Process</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand navbar-spacing dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reports
+              </a>
+              <div class="dropdown-menu page-header-dropdown sao-dropdown" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Bldg. Summary - Cost</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Summary- Area</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Detail</a><br/>
+                <a class="dropdown-item" href="#">Bldg. Occupancy</a><br/>
+                <a class="dropdown-item" href="#">Dept. Occupancy</a><br/>
+                <a class="dropdown-item" href="#">HCO Rent</a><br/>
+                <a class="dropdown-item" href="#">YTD Rent</a><br/>
+                <hr/>
+                <a class="dropdown-item" href="#">Run All</a><br/>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand navbar-spacing dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Utilities
+              </a>
+              <div class="dropdown-menu page-header-dropdown sao-dropdown" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Import Voucher</a><br/>
+                <a class="dropdown-item" href="voucher-entry.html">Edit Expenses</a><br/>
+                <a class="dropdown-item" href="#">Funding Change</a><br/>
+              </div>
+            </li>
+          </ul>
         </nav>
       </div>
     </div>
     <div style="text-align: center">
-      <h3>Data Set: September 2019 - Actual</h3>
+      <h3>Data Set: <strong>September 2019 - Actual</strong></h3>
     </div>
-    <div class="building-title-block" style="text-align: left">
-      <h1><strong>Group:</strong> 1	&nbsp;&nbsp;&nbsp;<strong>Building:</strong>  A
-      &nbsp;&nbsp;&nbsp;<strong>Description:</strong> 60 GARDEN ST. - BLDG "A"</h1>
-      <hr/><br/>
-    </div>
+    <br/>
+    <hr/><br/>
     <div class="activity-section">
+      <div class="building-title-block" style="text-align: left; margin-left:1%;">
+        <h1><strong>Group:</strong> 1	&nbsp;&nbsp;&nbsp;<strong>Building:</strong>  A
+        &nbsp;&nbsp;&nbsp;<strong>Description:</strong> 60 GARDEN ST. - BLDG "A"</h1>
+      </div>
       <div class="activity-left">
         <h3>Area</h3>
         <br/>
@@ -204,4 +232,29 @@
         </div>
       </div>
     </div>
+    <br/><br/>
+    <footer class="page-footer-tabs">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center">
+        <ul class="navbar-nav" style="list-style: none; padding-top: 25px">
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Next</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Previous</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Save</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand navbar-spacing" href="#">Exit</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>

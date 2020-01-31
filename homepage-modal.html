@@ -8,10 +8,10 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="./css/sao.css">
-    <link rel="stylesheet" href="./css/sao-sections.css">
-    <link rel="stylesheet" href="./css/sao-header.css">
-    <link rel="stylesheet" href="./css/sao-tables.css">
+    <link rel="stylesheet" href="../css/sao.css">
+    <link rel="stylesheet" href="../css/sao-sections.css">
+    <link rel="stylesheet" href="/Users/rbeall/Documents/Projects/Current/SAO/sao-html/css/sao-header.css">
+    <link rel="stylesheet" href="../css/sao-tables.css">
     <script type="text/javascript" src="./js/addInputRow.js"></script>
     <script type="text/javascript" src="./js/showFormSection.js"></script>
   </head>
@@ -73,8 +73,8 @@
         </nav>
       </div>
     </div><br/><br/>
-    <div class="homepage-section" style="height:800px;">
-        <form id="homepageForm">
+    <div class="">
+        <form onsubmit="openModal()" id="homepageForm" class="half-page-block-left">
           <h3>Scenario Input</h3>
           <hr/>
           <div class="form-row">
@@ -163,6 +163,26 @@
             <button type="submit" class="btn btn-primary" >Submit</button>
           </div>
         </form>
+        <script>
+          $('#homepageForm').on('submit', function(e){
+            $('#myModal').modal('show');
+            e.preventDefault();
+          });
+        </script>
+        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Do You Want To Create Now?</h4>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Create</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </div>
   </body>
 </html>

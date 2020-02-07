@@ -1,6 +1,6 @@
 footer
 {
-    position : absolute;
+    position : fixed;
     bottom : 0;
     height : 40px;
     margin-top : 40px;

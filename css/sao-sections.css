@@ -19,7 +19,10 @@
   margin-right: 10%;
   border-style: solid;
   border-color: black;
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 10px;
   margin-bottom: 10%;
 }
 
@@ -27,7 +30,9 @@
 {
   border-style: double;
   border-color: black;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
 }
 
 .activity-left
@@ -66,4 +71,18 @@
   height: 100%;
   width: 100px;
   background-color: blue;
+}
+
+.voucher-section
+{
+  margin-left: 5%;
+  margin-right: 5%;
+  border-style: solid;
+  border-color: black;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 10%;
+  min-height: 600px;
 }
